@@ -55,7 +55,7 @@ public:
     {
         digit = x % 10;
 		
-		//會有overflow的問題
+	//會有overflow的問題
         if(rev*10>INT_MAX||rev*10<INT_MIN)
         {
             return false;
