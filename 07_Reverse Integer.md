@@ -20,15 +20,25 @@ the 32-bit signed integer range: [−231,  231 − 1].
 For the purpose of this problem, assume that your function returns 0   
 when the reversed **integer overflows**.  
 
-
+C++：  
 ```c++
-    for (let i = 1; i < 10; i++) {
-        var b=""
-        var docRef = this.afstore.collection("washer").doc(b + i);
-        docRef.get().subscribe(function (doc) {
-            //處理資料的地方
-        })
-    }
-    
-    //  在 javascript 中，結尾的 " ; " 可有可無
+    class Solution {
+    public:
+        int reverse(int x) {
+
+            long long num = 0;
+            int n = 0;
+            while (x)
+            {
+                n = x % 10;
+                num = n + num * 10;
+                x /= 10;
+            }
+            return (num>INT_MAX||num<INT_MIN)? 0 : num;	
+        }
+    };
 ```
+INT_MAX：int的最大值  
+            --->2147483647  
+INT_MIN：int的最小值  
+            --->-2147483647 - 1  
