@@ -68,7 +68,8 @@ C++：
 		}
 	};
 ```
-###code使用到的stack
+  
+### code使用到的stack
 ---
 - Stack 是一種 先進後出 FILO 的資料結構  
 - 使用stack需要include名為stack特殊標頭檔：  
