@@ -85,7 +85,14 @@ C++：
 	stack<string> stack_string;         // 儲存string型態
 	stack< stack<int> > stack_stack_int;// 當然也可以在stack裡面儲存stack;
 ```
-- 基本操作：  
+- 基本操作：
+
+| Age           | Time  
+| ------------  | ----  
+| Feudal Age    | 02:10 
+| Castle Age    | 02:40 
+| Imperial Age  | 03:30 
+
 | 函數名稱| 說明 |
 | :-------------:|:-------------:|
 | push()| 將資料放進Stack頂端 |
