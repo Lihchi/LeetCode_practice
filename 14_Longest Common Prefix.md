@@ -16,9 +16,10 @@ Example 2:
 Note:  
 All given inputs are in lowercase letters a-z.  
 
-找這題是要找每個單字從前面開始看，一樣的字母，且要連續。
-ex.flower、flow、flight
-   --	   --	 --
+找這題是要找每個單字從前面開始看，一樣的字母，且要連續。  
+
+ex. **fl**ower、**fl**ow、**fl**ight  
+
 
 C++：  
 ```c++
