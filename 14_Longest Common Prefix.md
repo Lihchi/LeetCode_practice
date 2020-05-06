@@ -16,31 +16,38 @@ Example 2:
 Note:  
 All given inputs are in lowercase letters a-z.  
 
+找這題是要找每個單字從前面開始看，一樣的字母，且要連續。
+ex.flower、flow、flight
+   --	   --	 --
 
 C++：  
 ```c++
     class Solution {
 	public:
-		string longestCommonPrefix(vector<string>& strs) {
-			if(strs.empty())
-			{
-				return "";
-			}
-			string temp = "";
-			for(int i =0;i<strs[0].size();i++)
-			{
-				char c = strs[0][i];
-				for(int j=0;j<strs.size();j++)
-				{
-					if(strs[j][i]!=c)
-					{
-						return temp;
-					}
-				}
-			   temp.push_back(c); 
-			}
-			return temp;
+	    string longestCommonPrefix(vector<string>& strs) {
+		if(strs.empty())
+		{
+		    return "";
 		}
+		string temp = "";
+		for(int i =0;i<strs[0].size();i++)
+		{
+		    //從strs的第一個單字(""內的字)裡的第一個字母開始檢查
+		    char c = strs[0][i];
+		    for(int j = 0;j < strs.size();j++)
+		    {
+			//從每個strs單字的第一個字母比對是否一樣
+			//若檢查到不一樣，直接回傳temp
+			if(strs[j][i]!=c)
+			{
+			    return temp;
+			}
+		    }
+		    //一樣則push到char c裡面
+		    temp.push_back(c); 
+		}
+		return temp;
+	    }
 	};
 ```
 
