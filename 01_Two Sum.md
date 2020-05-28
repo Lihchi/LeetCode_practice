@@ -33,4 +33,27 @@ C++：
 		}
 	};
 ```
-
+ javascript：
+ ```javascript
+ /**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    var n = []//宣告一個空陣列 n
+    var t = target
+    for(var i =0;i<nums.length;i++)//lenght不用加"()"
+    {
+           for(var j = i+1;j<nums.length;j++)
+           {
+                   if(nums[i]+nums[j]==t)
+                   {
+                      n.push(i);
+                      n.push(j);
+                    }
+           }
+     }
+    return n
+};
+```
